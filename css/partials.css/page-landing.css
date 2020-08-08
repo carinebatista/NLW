@@ -92,6 +92,8 @@
         "proffy image image"
         "button button texting";
         gap: 60px;
+        column-gap: 87px;
+        row-gap: ;
     }
     .logo-container{
         grid-area: proffy;
@@ -107,6 +109,7 @@
     .buttons-container{
         grid-area: button;
         justify-content: flex-start;
+        margin: 0;
     }
     .total-conections{
         grid-area: texting;
