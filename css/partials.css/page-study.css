@@ -177,7 +177,7 @@ input[type=time]::-webkit-outer-spin-button {
 
 }
 
-.teacher-item p{
+.teacher-item > p{
     padding: 0 2rem;
     font-size: 1.6rem;
     line-height: 2.8rem;
@@ -215,6 +215,7 @@ input[type=time]::-webkit-outer-spin-button {
     width: 20rem;
     height: 5.6rem;
     background: var(--color-secondary);
+    color: var(--color-title-in-primary);
     border: 0;
     border-radius: .8rem;
     cursor: pointer;
@@ -279,6 +280,28 @@ input[type=time]::-webkit-outer-spin-button {
     }
     #page-study main{
         padding: 32px 0;
+        max-width: 740px;
+        margin: 0 auto;
+    }
+    #search-teachers .select-block{
+        margin-bottom: 0;
     }
 
+    .teacher-item > p{
+        padding: 0 32px;
+    }
+    .teacher-item footer p strong{
+        display: initial;
+        margin-left: 16px;
+    }
+
+    .teacher-item footer button{
+        width: 245px;
+        font-size: 16px;
+        justify-content: center;
+        font-weight: 600;
+    }
+    .teacher-item footer button img{
+        margin-right: 16px;
+    }
 }
