@@ -251,7 +251,19 @@ input[type=time]::-webkit-outer-spin-button {
 
     .page-header .header-content{
         max-width: 740px;
+
+        margin: 0 auto;
+
+
         flex: 1 1 ;
+        padding-bottom: 48px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .page-header .header-content strong{
+        max-width: 350px;
     }
     .teacher-item header,
     .teacher-item footer{
@@ -262,6 +274,11 @@ input[type=time]::-webkit-outer-spin-button {
         grid-template-columns: repeat(4, 1fr);
         gap: 16px;
         position: absolute;
+        bottom: -28px;
 
     }
+    #page-study main{
+        padding: 32px 0;
+    }
+
 }
