@@ -1,0 +1,51 @@
+
+.select-block label,
+.input-block label{
+    font-size:1.4rem;
+    color: var(--color-text-complement);
+}
+
+.input-block input,
+.select-block select{
+    width: 100%;
+    height: 5.6rem;
+    margin-top: 0.8rem;
+    border-radius: 0.8rem;
+    background: var(--color-input-background);
+    border:  1px solid var(--color-line-in-white);
+    outline:0;
+    font: 1.6rem Archivo;
+    padding: 10px;
+    box-sizing: border-box;
+}
+input[type=time]::-webkit-inner-spin-button,
+input[type=time]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.select-block select{
+    appearance: none;
+    box-sizing: border-box;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTc2cHgiIGhlaWdodD0iOTBweCIgdmlld0JveD0iMCAwIDE3NiA5MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDx0aXRsZT5UcmlhbmdsZTwvdGl0bGU+CiAgICA8ZyBpZD0iV2VsY29tZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkFydGJvYXJkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTYuMDAwMDAwLCAtNy4wMDAwMDApIiBmaWxsPSIjNEQ0RDREIj4KICAgICAgICAgICAgPHBhdGggZD0iTTEwNS40MTQyMTQsOC40MTQyMTM1NiBMMTkwLjU4NTc4Niw5My41ODU3ODY0IEMxOTEuMzY2ODM1LDk0LjM2NjgzNSAxOTEuMzY2ODM1LDk1LjYzMzE2NSAxOTAuNTg1Nzg2LDk2LjQxNDIxMzYgQzE5MC4yMTA3MTQsOTYuNzg5Mjg2MyAxODkuNzAyMDA2LDk3IDE4OS4xNzE1NzMsOTcgTDE4LjgyODQyNzEsOTcgQzE3LjcyMzg1NzYsOTcgMTYuODI4NDI3MSw5Ni4xMDQ1Njk1IDE2LjgyODQyNzEsOTUgQzE2LjgyODQyNzEsOTQuNDY5NTY3IDE3LjAzOTE0MDgsOTMuOTYwODU5MiAxNy40MTQyMTM2LDkzLjU4NTc4NjQgTDEwMi41ODU3ODYsOC40MTQyMTM1NiBDMTAzLjM2NjgzNSw3LjYzMzE2NDk4IDEwNC42MzMxNjUsNy42MzMxNjQ5OCAxMDUuNDE0MjE0LDguNDE0MjEzNTYgWiIgaWQ9IlRyaWFuZ2xlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDQuMDAwMDAwLCA1Mi4wMDAwMDApIHJvdGF0ZSgtMTgwLjAwMDAwMCkgdHJhbnNsYXRlKC0xMDQuMDAwMDAwLCAtNTIuMDAwMDAwKSAiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-position: right 0.7em top 50%,0 0;
+    background-size: 0.65em auto,100%;
+}
+
+.input-block{
+    position: relative;
+}
+.input-block:focus-within::after{
+  content: "";
+
+  width: calc(100%- 3.2rem);
+  height: 2px;
+  background: var(--color-primary-light);
+  position: absolute;
+  left: 1.6rem;
+  right: 1.6rem;
+  bottom: 0;
+
+}
