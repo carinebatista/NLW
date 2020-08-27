@@ -11,3 +11,12 @@
     margin: -3.2rem auto 3.2rem;
     padding-top: 6.4rem;
 }
+
+#page-give-classes fieldset{
+    border: none;
+    padding:0;
+}
+
+@media (min-width: 700px){
+    
+}
