@@ -75,33 +75,32 @@
 
 
         <main>
+            
+            {%for proffy in proffys %}
             <article class="teacher-item">
                 <header>
-                    <img src="https://avatars2.githubusercontent.com/u/18583716?s=460&v=4" alt="Carine Batista">
+                    <img src="{{proffy.avatar}}" alt="{{proffy.name}}">
                     <div>
-                        <strong>Carine Batista</strong>
-                        <span>Veterinária</span>
+                        <strong> {{proffy.name}}  </strong>
+                        <span>{{proffy.subject}}</span>
                     </div>
                 </header>
-                <p>Entusiasta da área de Veterinária, com uma paixão imensa por animais <br> <Br> Apaixonada por cuidar
-                    e ensinar, e por mudar a vida de pessoas atraves do tratamento paliativo e Ozonioterápico. Mais de
-                    200.000
-                    pessoas já passaram por essa imersão de cuidado e amor</p>
+                <p> {{proffy.bio}}</p>
                 <footer>
-                    <p>Preço/hora <strong>R$: 20,00</strong>
+                    <p>Preço/hora <strong>R$: {{proffy.cost}},00</strong>
                     </p>
-                    <button type="button"> <img src="./images/icons/whatsapp.svg" alt="whatsapp"> Entrar em contato
-                    </button>
+                        <a href="https://api.whatsapp.com/send?l=pt_BR&phone=55{{proffy.whatsapp}}&
+                        text=Tenho interesse na sua aula de {{proffy.subject}} {{proffy.name}}" 
+                        class="button" target="_blank" > 
+                            <img src="./images/icons/whatsapp.svg" alt="whatsapp"> Entrar em contato
+                        </a>
                 </footer>
-            </article class="teacher-item">
+            </article>
+
+            {%endfor%}
 
 
-
-            <article class="teacher-item">
-                <header>
-                    <img src="https://avatars2.githubusercontent.com/u/18583716?s=460&v=4" alt="Carine Batista">
-                </header>   
-            </article class="teacher-item">
+        
 
         </main>
 
