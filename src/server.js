@@ -23,23 +23,25 @@ const proffys= [
     }
 ] 
 
+function pageLanding(req,res){
+    return res.sendFile(__dirname + "/views/index.html")
+}
+function pageStudy(req, res){
+    return res.sendFile(__dirname +"/views/study.html")
+}
 
+function pageGiveClasses(req,res){
+    return res.sendFile(__dirname +"/views/give-class.html")
+}
 
 const express = require('express')
 const server = express()
 
-server.use(express.static("public"))
-
-
-.get("/", (req,res) => {
-    return res.sendFile(__dirname + "/views/index.html")
-})
-.get("/study", (req,res) => {
-    return res.sendFile(__dirname + "/views/study.html")
-})
-.get("/give-classes", (req,res) => {
-    return res.sendFile(__dirname + "/views/give-classes.html")
-})
+server
+.use(express.static("public"))
+.get("/", pageLanding)
+.get("/study", pageStudy)
+.get("/give-classes", pageGiveClasses)
 
 
 .listen(5000)
