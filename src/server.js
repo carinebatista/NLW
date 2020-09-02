@@ -54,15 +54,12 @@ function pageStudy(req, res){
     return res.render("study.html", { proffys, filters, subjects, weekdays })
 }
 
-
-https://avatars2.githubusercontent.com/u/18583716?s=460&v=4
-
-
-
 function pageGiveClasses(req,res){
     return res.render("give-classes.html")
 }
 
+
+// Servidor
 const express = require('express')
 const server = express()
 
