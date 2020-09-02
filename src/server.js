@@ -23,7 +23,6 @@ const proffys= [
     }
 ] 
 
-
 const subjects = [ 
     "Artes",
     "Biológicas",
@@ -52,7 +51,7 @@ function pageLanding(req,res){
 }
 function pageStudy(req, res){
     const filters= req.query
-    return res.render("study.html", { proffys, filters, subjects })
+    return res.render("study.html", { proffys, filters, subjects, weekdays })
 }
 
 
@@ -75,6 +74,7 @@ nunjucks.configure('src/views', {
     noCache:true, 
 })
 
+// Inicio e configuração do servidor
 server
 // Configurar arquivos Estáticos (css, scripts, imagens)
 .use(express.static("public"))
@@ -83,5 +83,7 @@ server
 .get("/", pageLanding)
 .get("/study", pageStudy)
 .get("/give-classes", pageGiveClasses)
+
+// Start no servidor
 .listen(5000)
 
