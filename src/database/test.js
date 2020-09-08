@@ -1,4 +1,5 @@
 const Database = require('./db')
+const createProffy = require('./createProffy')
 
 Database.then((db) => {
     // Inserir dados
