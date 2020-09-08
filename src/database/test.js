@@ -3,7 +3,7 @@ const createProffy = require('./createProffy')
 
 Database.then((db) => {
     // Inserir dados
-    proffy ={
+    proffyValue ={
     name:"Carine Batista",
     avatar: "https://avatars2.githubusercontent.com/u/18583716?s=460&v=4",
     whatsapp: "19992489970",
@@ -30,7 +30,7 @@ Database.then((db) => {
             time_to: 1220
         }
      ]
-
+    //  createProffy(db, {proffyValue, classValue, classScheduleValue})
 
     // Consultar os dados inseriddos
 
