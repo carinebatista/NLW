@@ -15,11 +15,17 @@ Database.then((db) => {
     cost:'20'
     // o proffy id virá pelo banco de dados
     }
-    
+
     classSchedule =[
+        //Class_id virá do bd após cadastrarmos a class
         {
             weekday: 1, 
             time_from:720,
+            time_to: 1220
+        },
+        {
+            weekday: 0, 
+            time_from:520,
             time_to: 1220
         }
      ]
