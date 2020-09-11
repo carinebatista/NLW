@@ -1,4 +1,4 @@
-module.exports = async function(db, {proffyValue, classValue, classScheduleValues}){
+module.exports = async function(db, { proffyValue, classValue, classScheduleValues }){
     // inserir dados na table de teachers
     const insertedProffy = await db.run(`
             INSERT INTO proffys (
@@ -7,13 +7,14 @@ module.exports = async function(db, {proffyValue, classValue, classScheduleValue
                 whatsapp,
                 bio
             )  VALUES(
-                ${proffyValue.name},
-                ${proffyValue.avatar},
-                ${proffyValue.whatsapp},
-                ${proffyValue.bio}
+                "${proffyValue.name}",
+                "${proffyValue.avatar}",
+                "${proffyValue.whatsapp}",
+                "${proffyValue.bio}"
             );
     `)
-   const proffy_id = insertedProffy.lastID;
+    
+    const proffy_id = insertedProffy.lastID;
 
     //inserir dados na tabela classes
     const insertedClass = await db.run(`
@@ -22,9 +23,9 @@ module.exports = async function(db, {proffyValue, classValue, classScheduleValue
                     cost, 
                     proffy_id
                 ) VALUES(
-                    ${classValue.subject},
-                    ${classValue.cost},
-                    ${proffy_id}
+                    "${classValue.subject}",
+                    "${classValue.cost}",
+                    "${proffy_id}"
                 );
     `)
 
@@ -39,15 +40,19 @@ module.exports = async function(db, {proffyValue, classValue, classScheduleValue
                 time_from,
                 time_to
             ) VALUES (
-                ${class_id},
-                ${classScheduleValue.weekday},
-                ${classScheduleValue.time_from},
-                ${classScheduleValue.time_to},
+                "${class_id}",
+                "${classScheduleValue.weekday}",
+                "${classScheduleValue.time_from}",
+                "${classScheduleValue.time_to}"
             );
         `)
     })    
     
     // aqui vai executar todos os db.runs() da class_schedules
-    await Promise.all(insertedAllClassScheduleValues)
+    // await Promise.all(insertedAllClassScheduleValues)
+
+    // consultar os dados inseridos
+    // toddos os proffys
+    await db.all(" SELECT * FROM proffys")
 
 }

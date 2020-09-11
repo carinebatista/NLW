@@ -1,7 +1,7 @@
 const Database = require('./db')
 const createProffy = require('./createProffy')
 
-Database.then((db) => {
+Database.then(async (db) => {
     // Inserir dados
     proffyValue ={
     name:"Carine Batista",
@@ -10,7 +10,6 @@ Database.then((db) => {
     bio:'Entusiasta da área de Veterinária, com uma paixão imensa por animais. Apaixonada por cuidar e ensinar, e por mudar a vida de pessoas atraves do tratamento paliativo e Ozonioterápico. Mais de 200. 000 pessoas já passaram por essa imersão de cuidado e amor',
     }
   
-
     classValue = {
     subject:'Veterinária', 
     cost:'20'
@@ -30,7 +29,9 @@ Database.then((db) => {
             time_to: 1220
         }
      ]
-    //  createProffy(db, {proffyValue, classValue, classScheduleValue})
+
+
+     await createProffy(db, {proffyValue, classValue, classScheduleValues})
 
     // Consultar os dados inseriddos
 
