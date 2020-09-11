@@ -52,7 +52,16 @@ module.exports = async function(db, { proffyValue, classValue, classScheduleValu
     // await Promise.all(insertedAllClassScheduleValues)
 
     // consultar os dados inseridos
-    // toddos os proffys
-    await db.all(" SELECT * FROM proffys")
 
+    // toddos os proffys
+    const selectedProffys =  await db.all(" SELECT * FROM proffys")
+    console.log(selectedProffys)
+
+    // Consultar as classes de um determinado professor 
+    // Trazer junto os dados do prof
+        const selectClassesAndProffys = await db.all(`
+            SELECT classes.*, proffys.*
+            FROM proffys
+            JOIN classes ON ()
+        `)
 }
