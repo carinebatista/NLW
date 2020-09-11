@@ -30,7 +30,23 @@ module.exports = async function(db, {proffyValue, classValue, classScheduleValue
     const class_id = insertedProffy.lastID
 
     // Inserir dados na tabela class_schedule
-    classScheduleValues.map()                
+    const insertedAllClassScheduleValues = classScheduleValues.map((classScheduleValue) => {
+        return db.run(`
+            INSERT INTO class_schedule (
+                class_id,
+                weekday,
+                time_from,
+                time_to
+            ) VALUES (
+                ${class_id},
+                ${classScheduleValue.weekday},
+                ${classScheduleValue.time_from},
+                ${classScheduleValue.time_to},
+            );
+        `)
+    })    
+    
+    // aqui vai executar todos os db.runs() da class_schedules
 
 
 }
