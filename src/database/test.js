@@ -17,7 +17,7 @@ Database.then((db) => {
     // o proffy id virá pelo banco de dados
     }
 
-    classSchedule =[
+    classScheduleValues =[
         //Class_id virá do bd após cadastrarmos a class
         {
             weekday: 1, 
